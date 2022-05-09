@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Imagens/dev.ico" type="image/x-icon">
+    <title>Mídias em HTML 5</title>
+</head>
+<body>
+    <h1>Imagens Dinânmicas</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou aumente e diminua o tamanho do navegador.</p>
+    <picture>
+        <source media="(max-width: 700px)" srcset="Imagens/P.png" type="image/png">
+        <source media="(max-width: 1000px)" srcset="Imagens/M.png" type="image/png">
+        <img src="Imagens/G.png" alt="G">
+    </picture>
+
+    <h1>Áudios</h1>
+    <p>Inserindo áudios!</p>
+    <audio src="media/Cattle _Telecasted.mp3" controls autoplay></audio>
+    <!--Compatibilidade: MP3 WAV OGG-->
+    
+    <audio preload="metadata" controls loop>
+        <source src="media/Cattle _Telecasted.mp3" type="audio/mpeg">
+        <source src="media/Cattle _Telecasted.mp3" type="audio/ogg">
+        <source src="media/Cattle _Telecasted.mp3" type="audio/wav">
+        <p>Erro ao reproduzir faixa! <a href="media/Cattle _Telecasted.mp3">CLIQUE AQUI PARA BAIXAR O ARQUIVO MP3</a></p>
+    </audio>
+</body>
+</html>

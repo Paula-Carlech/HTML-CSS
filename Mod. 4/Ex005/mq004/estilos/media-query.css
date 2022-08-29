@@ -2,6 +2,88 @@
 
 /*Todas as demais medias*/
 
-@media print{
-    
+/*  
+    TYPES OF CSS BREAKPOINTS
+    320px — 480px for mobile devices 
+    481px — 768px for iPads & tablets
+    769px — 1024px for small screens like laptop
+    1025px — 1200px for large screens like Desktops
+    1201px and above for extra large screens like TV.
+*/
+
+@media print { /*IMPRESSORA*/
+    *{
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    main{
+        border: 2px solid black;
+        width: 90vw;
+        height: 95vh;
+    }
+
+    main h1{
+        color: black;
+        text-shadow: none;
+    }
+
+    main::after{
+        content: "Media para impressão";
+        text-decoration: overline;
+        font-size: 0.5em;
+    }
+
+    img#tv{display: none;}
+    img#pc{display: none;}
+    img#print{display: block;}
+    img#tablet{display: none;}
+    img#phone{display: none;}
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) { /*TABLETS & IPADS*/
+    body{
+        background-image: url(../../imagens/back-tablet.jpg);
+    }
+
+    img#tv{display: none;}
+    img#pc{display: none;}
+    img#print{display: none;}
+    img#tablet{display: block;}
+    img#phone{display: none;}
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) { /*LAPTOPS*/
+    body{
+        background-image: url(../../imagens/back-pc.jpg);
+    }
+
+    img#tv{display: none;}
+    img#pc{display: block;}
+    img#print{display: none;}
+    img#tablet{display: none;}
+    img#phone{display: none;}
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) { /*DESKTOPS*/
+    body{
+        background-image: url(../../imagens/back-pc.jpg);
+    }
+
+    img#tv{display: none;}
+    img#pc{display: block;}
+    img#print{display: none;}
+    img#tablet{display: none;}
+    img#phone{display: none;}
+}
+
+@media screen and (min-width: 1021px) { /*TV*/
+    body{
+        background-image: url(../../imagens/back-tv.jpg);
+    }
+
+    img#tv{display: block;}
+    img#pc{display: none;}
+    img#print{display: none;}
+    img#tablet{display: none;}
+    img#phone{display: none;}
 }
